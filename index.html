@@ -39,7 +39,7 @@
 </head>
 <body class="bg-brand-darkBg text-slate-100 transition-colors duration-300 font-sans relative overflow-x-hidden">
 
-    <!-- Background Canvas for Particles -->
+    <!-- Background Canvas for Interactive Particles -->
     <canvas id="particles" class="fixed inset-0 pointer-events-none z-0 opacity-60"></canvas>
 
     <!-- Navigation Header -->
@@ -65,32 +65,80 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="about" class="min-h-screen flex items-center justify-center pt-28 pb-12 px-6 relative z-10">
-        <div class="max-w-4xl mx-auto text-center space-y-6">
-            <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full glass-panel text-sm text-brand-cyan mb-2">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-                <span>Open for Opportunities &amp; Collaborations</span>
+    <!-- Hero Section (Enhanced 2-Column with Profile Image & Dynamic Typing) -->
+    <section id="about" class="min-h-screen flex items-center justify-center pt-28 pb-16 px-6 relative z-10">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Left: Text Introduction -->
+            <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full glass-panel text-sm text-brand-cyan">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                    <span>Open for Opportunities &amp; Collaborations</span>
+                </div>
+                
+                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight hero-title">
+                    Hi, I'm <br class="hidden lg:block"/>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan via-brand-blue to-brand-purple glow-text">
+                        Rahul Kumar Mohanty
+                    </span>
+                </h1>
+
+                <div class="text-xl sm:text-2xl font-medium text-slate-300">
+                    I am a <span id="typewriter" class="text-brand-cyan font-mono border-r-2 border-brand-cyan pr-1"></span>
+                </div>
+                
+                <p class="text-slate-300 font-light leading-relaxed max-w-xl mx-auto lg:mx-0 hero-subtitle">
+                    Full-Stack Developer building scalable,production-ready software with Java,Spring, and React--briding the gap between robust distributed systems and engaging digital experiences.</p>
+                
+                <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-2">
+                    <a href="#projects" class="px-7 py-3.5 rounded-xl font-semibold bg-gradient-to-r from-brand-cyan to-brand-blue text-slate-950 hover:shadow-lg hover:shadow-brand-cyan/30 hover:-translate-y-1 transition duration-300">
+                        View Projects <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="mailto:rm3394691@gmail.com" class="px-7 py-3.5 rounded-xl font-semibold glass-panel hover:bg-white/10 hover:-translate-y-1 transition duration-300">
+                        <i class="fa-solid fa-envelope mr-2"></i> Contact Me
+                    </a>
+                </div>
+
+                <div class="flex justify-center lg:justify-start space-x-6 pt-4 text-2xl text-slate-400">
+                    <a href="https://github.com/rahulkumar1689" target="_blank" class="hover:text-brand-cyan hover:scale-110 transition"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/rahul-kumar-mohanty-5ba3132ba" target="_blank" class="hover:text-brand-cyan hover:scale-110 transition"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="mailto:rm3394691@gmail.com" class="hover:text-brand-cyan hover:scale-110 transition"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="tel:+919090504554" class="hover:text-brand-cyan hover:scale-110 transition"><i class="fa-solid fa-phone"></i></a>
+                </div>
             </div>
-            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight hero-title">
-                Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan via-brand-blue to-brand-purple glow-text">Rahul Kumar Mohanty</span>
-            </h1>
-            <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed hero-subtitle">
-                Full-Stack Developer building scalable,production-ready software with Java,Spring, and React--briding the gap between robust distributed systems and engaging digital experiences.</p>
-            <div class="flex flex-wrap justify-center gap-4 pt-4">
-                <a href="#projects" class="px-8 py-3.5 rounded-xl font-semibold bg-gradient-to-r from-brand-cyan to-brand-blue text-slate-950 hover:shadow-lg hover:shadow-brand-cyan/30 hover:-translate-y-1 transition duration-300">
-                    View Projects <i class="fa-solid fa-arrow-right ml-2"></i>
-                </a>
-                <a href="mailto:rm3394691@gmail.com" class="px-8 py-3.5 rounded-xl font-semibold glass-panel hover:bg-white/10 hover:-translate-y-1 transition duration-300">
-                    <i class="fa-solid fa-envelope ml-1 mr-2"></i> Contact Me
-                </a>
+
+            <!-- Right: Realistic Profile Photo Frame with Floating Tech Badges -->
+            <div class="lg:col-span-5 flex justify-center relative">
+                <div class="relative group" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.25">
+                    
+                    <!-- Ambient Backdrop Glow -->
+                    <div class="absolute -inset-2 bg-gradient-to-tr from-brand-cyan via-brand-blue to-brand-purple rounded-3xl blur-2xl opacity-40 group-hover:opacity-75 transition duration-500"></div>
+
+                    <!-- Main Photo Card -->
+                    <div class="relative w-72 h-[22rem] sm:w-80 sm:h-[24rem] rounded-3xl overflow-hidden glass-panel p-2 shadow-2xl border border-white/20">
+                        <img src="WhatsApp Image 2025-10-17 at 09.50.38.jpeg" alt="Rahul Kumar Mohanty" class="w-full h-full object-cover object-top rounded-2xl filter contrast-[1.03] brightness-95 group-hover:scale-105 transition duration-500">
+                    </div>
+
+                    <!-- Floating Tech Pill: Spring Boot -->
+<div class="absolute -top-4 -left-6 glass-panel px-4 py-2 rounded-2xl shadow-xl flex items-center space-x-2 border border-emerald-500/30 animate-bounce" style="animation-duration: 4s;">
+    <i class="fa-solid fa-leaf text-emerald-400 text-xl"></i>
+    <span class="text-xs font-semibold">Spring Boot</span>
+</div>
+
+                    <!-- Floating Tech Pill: Java -->
+                    <div class="absolute -bottom-4 -right-4 glass-panel px-4 py-2 rounded-2xl shadow-xl flex items-center space-x-2 border border-orange-500/30 animate-bounce" style="animation-duration: 5s;">
+                        <i class="fa-brands fa-java text-orange-500 text-xl"></i>
+                        <span class="text-xs font-semibold">Java &amp; OOP</span>
+                    </div>
+
+                    <!-- Floating Badge: Degree -->
+                    <div class="absolute top-1/2 -right-8 -translate-y-1/2 glass-panel px-3 py-2 rounded-2xl shadow-xl flex items-center space-x-2 border border-brand-blue/30 hidden sm:flex">
+                        <i class="fa-solid fa-graduation-cap text-brand-blue text-lg"></i>
+                        <span class="text-xs font-semibold">B.Tech CSE</span>
+                    </div>
+                </div>
             </div>
-            <div class="flex justify-center space-x-6 pt-6 text-2xl text-slate-400">
-                <a href="https://github.com/rahulkumar1689" target="_blank" class="hover:text-brand-cyan transition"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/rahul-kumar-mohanty-5ba3132ba" target="_blank" class="hover:text-brand-cyan transition"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="mailto:rm3394691@gmail.com" class="hover:text-brand-cyan transition"><i class="fa-solid fa-envelope"></i></a>
-                <a href="tel:+919090504554" class="hover:text-brand-cyan transition"><i class="fa-solid fa-phone"></i></a>
-            </div>
+
         </div>
     </section>
 
@@ -161,11 +209,12 @@
                 <div>
                     <div class="flex justify-between items-center mb-4">
                         <i class="fa-solid fa-laptop-code text-3xl text-brand-cyan"></i>
-                        <span class="text-xs px-2.5 py-1 rounded bg-brand-cyan/20 text-brand-cyan font-mono">HTML,CSS,JS</span>
+                        <span class="text-xs px-2.5 py-1 rounded bg-brand-cyan/20 text-brand-cyan font-mono">HTML, CSS, JS</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">ApnaBazaar – Quick-Commerce Grocery Web Application</h3>
+                    <h3 class="text-xl font-bold mb-2">ApnaBazaar – Quick-Commerce Grocery App</h3>
                     <p class="text-slate-400 text-sm mb-4 leading-relaxed">
-                        A modern, single-page quick-commerce frontend engineered to replicate real-time grocery delivery platforms . It features complete multi-view routing, state-driven cart mechanics, persistent user account management, and a dynamic checkout lifecycle—built purely using vanilla web technologies without external frameworks </p>
+                        A modern, single-page quick-commerce frontend engineered to replicate real-time grocery delivery platforms. Features multi-view routing, state-driven cart mechanics, persistent account management, and checkout life-cycle.
+                    </p>
                 </div>
                 <a href="https://rahulkumar1689.github.io/Apnabazaar/" target="_blank" class="block text-center py-2.5 rounded-lg bg-brand-cyan/10 hover:bg-brand-cyan text-brand-cyan hover:text-slate-950 font-semibold transition duration-300">
                     Live Demo <i class="fa-solid fa-external-link ml-1"></i>
@@ -181,7 +230,7 @@
                     </div>
                     <h3 class="text-xl font-bold mb-2">Responsive Webpage Design</h3>
                     <p class="text-slate-400 text-sm mb-4 leading-relaxed">
-                        Built a responsive webpage adapting seamlessly across mobile, tablet, and desktop views using CSS media queries and Flexbox/Grid for polished UI layouts.
+                        Built a responsive webpage adapting seamlessly across mobile, tablet, and desktop views using modern CSS media queries, Flexbox, and Grid for pixel-perfect layouts.
                     </p>
                 </div>
                 <a href="https://rahulkumar1689.github.io/Project-2/" target="_blank" class="block text-center py-2.5 rounded-lg bg-brand-blue/10 hover:bg-brand-blue text-brand-blue hover:text-slate-950 font-semibold transition duration-300">
@@ -198,7 +247,7 @@
                     </div>
                     <h3 class="text-xl font-bold mb-2">Interactive JS Webpage</h3>
                     <p class="text-slate-400 text-sm mb-4 leading-relaxed">
-                        Implemented dynamic DOM manipulation, user action toggles, and event handling using vanilla JavaScript to construct an interactive user interface without external frameworks.
+                        Implemented dynamic DOM manipulation, interactive toggles, and robust event handling using vanilla JavaScript to construct interactive components without external dependencies.
                     </p>
                 </div>
                 <a href="https://rahulkumar1689.github.io/Project-3/" target="_blank" class="block text-center py-2.5 rounded-lg bg-brand-purple/10 hover:bg-brand-purple text-brand-purple hover:text-white font-semibold transition duration-300">
@@ -210,12 +259,13 @@
             <div class="glass-panel rounded-2xl p-6 flex flex-col justify-between" data-tilt data-tilt-glare data-tilt-max-glare="0.2">
                 <div>
                     <div class="flex justify-between items-center mb-4">
-                        <i class="fa-solid fa-bolt text-3xl text-brand-purple"></i>
-                        <span class="text-xs px-2.5 py-1 rounded bg-brand-purple/20 text-brand-purple font-mono">JS,HTML,CSS</span>
+                        <i class="fa-solid fa-file-lines text-3xl text-brand-purple"></i>
+                        <span class="text-xs px-2.5 py-1 rounded bg-brand-purple/20 text-brand-purple font-mono">JS, HTML, CSS</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Resume Scanner — ATS Compatibility Analysis Tool</h3>
+                    <h3 class="text-xl font-bold mb-2">Resume Scanner — ATS Analysis Tool</h3>
                     <p class="text-slate-400 text-sm mb-4 leading-relaxed">
-                        cyber-minimalist, developer-tool-styled web application designed to simulate an Applicant Tracking System (ATS) document parse and compatibility evaluation. It provides real-time keyword matching, score gauge animations, missing skill diagnostics, and an interactive checklist of actionable resume improvements.</p>
+                        Cyber-minimalist developer tool engineered to simulate Applicant Tracking System (ATS) document parsing with real-time keyword matching, score gauges, and missing skill diagnostics.
+                    </p>
                 </div>
                 <a href="https://rahulkumar1689.github.io/Ats-Resume-Scanner/" target="_blank" class="block text-center py-2.5 rounded-lg bg-brand-purple/10 hover:bg-brand-purple text-brand-purple hover:text-white font-semibold transition duration-300">
                     Live Demo <i class="fa-solid fa-external-link ml-1"></i>
@@ -226,13 +276,15 @@
             <div class="glass-panel rounded-2xl p-6 flex flex-col justify-between" data-tilt data-tilt-glare data-tilt-max-glare="0.2">
                 <div>
                     <div class="flex justify-between items-center mb-4">
-                        <i class="fa-solid fa-bolt text-3xl text-brand-purple"></i>
-                        <span class="text-xs px-2.5 py-1 rounded bg-brand-purple/20 text-brand-purple font-mono">JS,HTML,CSS</span>
+                        <i class="fa-solid fa-table-columns text-3xl text-brand-cyan"></i>
+                        <span class="text-xs px-2.5 py-1 rounded bg-brand-cyan/20 text-brand-cyan font-mono">JS, HTML, CSS</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">JobTrack — Placement Ledger & Eligibility Tracking Dashboard</h3>
+                    <h3 class="text-xl font-bold mb-2">JobTrack — Placement Ledger &amp; Dashboard</h3>
                     <p class="text-slate-400 text-sm mb-4 leading-relaxed">
-                        A campus placement management dashboard designed with an archival ledger aesthetic. It enables students to track recruitment pipelines via an interactive Kanban workflow, evaluate multi-criteria job eligibility rules in real time, monitor application deadlines, and visualize placement analytics. </div>
-                <a href="https://rahulkumar1689.github.io/JOB_TRACKER/" target="_blank" class="block text-center py-2.5 rounded-lg bg-brand-purple/10 hover:bg-brand-purple text-brand-purple hover:text-white font-semibold transition duration-300">
+                        A placement tracking dashboard enabling students to manage recruitment pipelines via interactive Kanban boards, automated criteria evaluation, deadline tracking, and analytics.
+                    </p>
+                </div>
+                <a href="https://rahulkumar1689.github.io/JOB_TRACKER/" target="_blank" class="block text-center py-2.5 rounded-lg bg-brand-cyan/10 hover:bg-brand-cyan text-brand-cyan hover:text-slate-950 font-semibold transition duration-300">
                     Live Demo <i class="fa-solid fa-external-link ml-1"></i>
                 </a>
             </div>
@@ -296,7 +348,7 @@
                 </div>
                 <div>
                     <h3 class="font-bold text-lg">GenAI Powered Data Analytics</h3>
-                    <p class="text-sm text-slate-400">Tata (Forage) — June 2026</p>
+                    <p class="text-sm text-slate-400">Tata (Forage)</p>
                 </div>
             </div>
 
@@ -306,7 +358,7 @@
                 </div>
                 <div>
                     <h3 class="font-bold text-lg">Data Analytics Job Simulation</h3>
-                    <p class="text-sm text-slate-400">Deloitte (Forage) — June 2026</p>
+                    <p class="text-sm text-slate-400">Deloitte (Forage)</p>
                 </div>
             </div>
         </div>

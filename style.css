@@ -1,9 +1,9 @@
 /* Glassmorphism Panel Styles */
 .glass-panel {
-    background: rgba(15, 23, 42, 0.65);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 /* Light Theme Overrides */
@@ -13,8 +13,8 @@ html.light body {
 }
 
 html.light .glass-panel {
-    background: rgba(255, 255, 255, 0.7);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 html.light .hero-subtitle {
@@ -23,5 +23,10 @@ html.light .hero-subtitle {
 
 /* Text Glow Effect */
 .glow-text {
-    text-shadow: 0 0 20px rgba(79, 172, 254, 0.5);
+    text-shadow: 0 0 24px rgba(79, 172, 254, 0.45);
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
 }
